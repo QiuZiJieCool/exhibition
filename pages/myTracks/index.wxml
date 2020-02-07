@@ -1,0 +1,39 @@
+<!--pages/myTracks/index.wxml-->
+<import src="/tabbar-template/index.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
+<view class="icon">
+
+<image src="/assets/_message.png" bindtap="message"  wx:if="{{current==3||current==2}}"/>
+<image src="/assets/index_comment.png"  class="currentImg" wx:if="{{current==1}}" />
+
+
+<image src="/assets/_star.png" bindtap="star" wx:if="{{current==1||current==3}}" />
+<image src="/assets/index_sc.png"  class="currentImg" wx:if="{{current==2}}" />
+ 
+<image src="/assets/_click.png" bindtap="click"  wx:if="{{current==1||current==2}}" />
+<image src="/assets/index_click.png"  class="currentImg" wx:if="{{current==3}}" />
+</view> 
+
+<view class="title">
+<image src="/assets/tranck_left.png"></image>
+<text wx:if="{{current==1}}">我的评论</text>
+<text wx:if="{{current==2}}">我的收藏</text>
+<text wx:if="{{current==3}}">我的点赞</text>
+</view>
+
+<view class="exList">
+
+<block wx:for="{{list0}}" wx:key="index" wx:if="{{current==1}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+</block>
+
+<block wx:for="{{list1}}" wx:key="index" wx:if="{{current==2}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+</block>
+
+<block wx:for="{{list2}}" wx:key="index" wx:if="{{current==3}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+</block>
+
+</view>

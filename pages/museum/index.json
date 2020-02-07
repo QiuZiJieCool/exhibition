@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "museumList":"/components/museumList/index"
+  },
+    "navigationBarTitleText": "关于博物馆"
+}

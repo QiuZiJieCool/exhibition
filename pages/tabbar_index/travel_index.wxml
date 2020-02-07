@@ -1,0 +1,48 @@
+<!--pages/travel_index/travel_index.wxml-->
+<import src="/tabbar-template/index.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<!--index.wxml-->
+
+<view class="search">
+<input placeholder="输入藏品名称" placeholder-class="center" bindinput="bindInput"/>
+</view>
+
+<view class="choose">
+<view class=" dynasty">
+  <text>年代</text>
+  <mySelect prop-array='{{selectArray1}}' defalut-select='{{sortType}}' bind:selected='selectEvent'></mySelect>
+</view>
+<view class=" variety">
+  <text>类别</text>
+  <mySelect prop-array='{{selectArray2}}' defalut-select='{{sortType}}' bind:selected='selectEvent'></mySelect>
+</view>
+<!-- <view class="location">
+  <text>区域</text>
+  <mySelect prop-array='{{selectArray3}}' defalut-select='{{sortType}}' bind:selected='selectEvent'></mySelect>
+</view> -->
+</view>
+
+<view class="rankList">
+<block wx:for="{{rankList}}" wx:key="{{index}}">
+<text  bindtap="toItem" data-index="{{index}}" class="{{index==currentIndex?'line':''}}">{{item}}</text>
+</block>
+</view>
+
+<view class="exhibitionList">
+<block wx:for="{{list0}}" wx:key="index" wx:if="{{currentIndex==0}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" hot="{{item.likenum}}" showIcon="true"></exList>
+</block>
+<block wx:for="{{list1}}" wx:key="index" wx:if="{{currentIndex==1}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="true" hot="{{item.collectnum}}"></exList>
+</block>
+<block wx:for="{{list2}}" wx:key="index" wx:if="{{currentIndex==2}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="true" hot="{{item.likenum}}"></exList>
+</block>
+<block wx:for="{{list3}}" wx:key="index" wx:if="{{currentIndex==3}}">
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="true" hot="{{item.commentnum}}"></exList>
+</block>
+
+<!-- 加载更多区域 -->
+<!-- <view class='loadmore loading'  wx:if="{{hasMore}}">正在加载...</view>
+<view class='loadmore '  wx:else>已经到底了</view> -->
+</view>

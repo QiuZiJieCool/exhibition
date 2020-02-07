@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "mySelect": "/components/select/index",
+    "exList": "/components/exList/index"
+  }
+}

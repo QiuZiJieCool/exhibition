@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/tabbar_index/travel_index",
+    "pages/tabbar-scan/travel_car",
+    "pages/tabbar_my/travel_my",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/listInfo/index",
+    "pages/myTracks/index",
+    "pages/museum/index",
+    "pages/voluntary/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,36 @@
+/* pages/tabBar-template/index.wxss */
+.tabBar-icon{
+  width:63rpx;
+  height: 63rpx;
+}
+.tabBar{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  padding:10rpx;
+  margin-left:-4rpx;
+  background:#fff;
+  font-size:24rpx;
+  color:#8A8A8A;
+  box-shadow: 0 0 02rpx #eee; 
+  z-index: 9999;
+}
+
+ .tabBar-item{
+   margin-top: 20rpx;
+  float:left;
+  width: 33.333%;
+  text-align: center;
+  overflow: hidden;
+}
+/*当前字体颜色*/
+.tabBartext{
+  color: black;
+}
+.navigator-hover{
+  background-color: rgba(0, 0, 0, 0);
+}
+.tabBar-item:nth-child(2) .tabBar-icon{
+width: 100rpx;
+height: 100rpx;
+}

@@ -1,0 +1,35 @@
+<!--pages/tabBar-template/index.wxml-->
+<template name="tabBar">
+  <view class="tabBar">
+    <!-- <block wx:for="{{tabBar}}" wx:for-item="item" wx:key="tabBar">
+        <view class="tabBar-item">
+            <navigator open-type="reLaunch" url="{{item.pagePath}}">
+                <view><image class="tabBar-icon" src='{{item.iconPath}}'></image></view>
+                <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+            </navigator>
+        </view>
+    </block> -->
+    <view class="tabBar-item">
+      <navigator open-type="reLaunch" url="{{tabBar[0].pagePath}}">
+        <view>
+          <image class="tabBar-icon" src='{{tabBar[0].iconPath}}'></image>
+        </view>
+        <view class="{{tabBar[0].current== 1 ? 'tabBartext' :''}}">{{tabBar[0].text}}</view>
+      </navigator>
+    </view>
+    <view class="tabBar-item">
+        <view bindtap="toScan">
+          <image class="tabBar-icon" src='{{tabBar[1].iconPath}}'></image>
+        </view>
+        <view class="{{tabBar[1].current== 1 ? 'tabBartext' :''}}">{{tabBar[1].text}}</view>
+    </view>
+    <view class="tabBar-item">
+      <navigator open-type="reLaunch" url="{{tabBar[2].pagePath}}">
+        <view>
+          <image class="tabBar-icon" src='{{tabBar[2].iconPath}}'></image>
+        </view>
+        <view class="{{tabBar[2].current== 1 ? 'tabBartext' :''}}">{{tabBar[2].text}}</view>
+      </navigator>
+    </view>
+  </view>
+</template>

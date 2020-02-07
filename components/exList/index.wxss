@@ -1,0 +1,38 @@
+/* components/exList/index.wxss */
+.contain {
+  width: 600rpx;
+  margin: 16rpx auto;
+  padding: 20rpx 40rpx;
+  height: 140rpx;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.img {
+  width:400rpx;
+  display: flex;
+  align-items: center;
+}
+.img text{
+  font-size: 26rpx;
+}
+.img image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 40rpx;
+}
+.icon {
+  /* width: 120rpx; */
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #F6DD8D;
+}
+.icon image {
+  width: 30rpx;
+  height:35rpx;
+  margin-right: 30rpx;
+}
+.title {
+  font-size: 30rpx;
+}

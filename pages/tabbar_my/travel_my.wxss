@@ -1,0 +1,66 @@
+/* pages/travel_my/travel_my.wxss */
+/* pages/user/index.wxss */
+.user {
+  width: 600rpx;
+  margin: 20rpx auto 50rpx;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;  
+}
+.user image{
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userInfo {
+  font-size: 24rpx;
+  margin-left: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.vxNum {
+  margin-top: 10rpx;
+  color: #ccc;
+}
+.ad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left ,
+.right {
+  width: 20rpx;
+  height: 182rpx;
+}
+
+.middle {
+  width: 720rpx;
+  height: 240rpx;
+}
+.about {
+  margin-top: 50rpx;
+}
+.item {
+  height: 150rpx;
+
+  padding: 0 48rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.item-left {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 36rpx;
+}
+.item-right {
+  width: 18rpx;
+  height: 30rpx;
+  position: absolute;
+  right:50rpx;
+}
+.item text {
+  font-size:28rpx;
+}

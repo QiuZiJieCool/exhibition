@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+        "museumList": "/components/museumList/index"
+  },
+    "navigationBarTitleText": "志愿者服务"
+}

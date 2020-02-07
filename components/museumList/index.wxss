@@ -1,0 +1,14 @@
+/* components/museumList/index.wxss */
+.contain {
+  height: 100rpx;
+  width:650rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+.contain image {
+width: 120rpx;
+height: 90rpx;
+}

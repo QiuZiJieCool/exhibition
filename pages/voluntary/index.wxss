@@ -1,0 +1,57 @@
+/* pages/voluntary/index.wxss */
+
+.top {
+  display: flex;
+  width: 500rpx;
+  margin: 10rpx auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #ccc;
+}
+
+.top text {
+  padding-bottom: 15rpx;
+}
+
+.content {
+  background-color: #fcfcfc;
+  padding: 0 30rpx;
+  margin-bottom: 150rpx;
+}
+
+.ad {
+  width: 710rpx;
+  height: 250rpx;
+}
+
+.current {
+  border-bottom: 1rpx solid #fccc91;
+  color: black;
+}
+.item {
+  padding: 15rpx 30rpx 10rpx 20rpx;
+  width: 650rpx;
+  height: 160rpx;
+  border: 1rpx dashed #FCFCFC;
+  margin:20rpx auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  position: relative;
+}
+.item text {
+  margin-bottom: 14rpx;
+}
+.info{
+  position: absolute;
+  right:30rpx;
+  bottom:10rpx;
+  width: 66rpx;
+  height: 34rpx;
+  background-color: #FCCC91;
+  text-align: center;
+  line-height: 34rpx;
+  color: white;
+  font-size: 20rpx;
+}

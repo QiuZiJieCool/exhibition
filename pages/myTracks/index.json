@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  "exList": "/components/exList/index"
+  },
+  "navigationBarTitleText": "我的足迹"
+  
+}

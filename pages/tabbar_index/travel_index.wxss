@@ -1,0 +1,64 @@
+/* pages/travel_index/travel_index.wxss */
+/**index.wxss**/
+page{
+  background-color: #fdfdfd;
+}
+.search {
+ position: relative;
+ background-color:#F3EBD3;
+ border-radius: 20rpx;
+ width: 642rpx;
+ margin: 20rpx auto;
+ height: 44rpx;
+}
+.center {
+  text-align: center;
+  font-size: 18rpx;
+}
+.search input {
+  width: 400rpx;
+  margin: 0 auto;
+  font-size: 18rpx;
+  text-align: center;
+  height: 100%;
+}
+.serachConfirm{
+  position: absolute;
+  right: 80rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  top:8rpx;
+}
+
+.choose {
+  width: 400rpx;
+  margin: 0 auto;
+  display: flex;
+  font-size: 24rpx;
+  align-items: center;
+  justify-content: space-between
+}
+.dynasty ,
+.variety {
+  display: flex;
+  align-items: center;
+}
+.rankList {
+  width: 642rpx;
+  margin: 20rpx auto 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #ccc;
+}
+.rankList text {
+  text-align: center;
+  padding:16rpx 0;
+}
+.line {
+  border-bottom: 1rpx solid #F2BE45;
+  color: black;
+}
+.exhibitionList {
+  margin-bottom: 140rpx;
+}

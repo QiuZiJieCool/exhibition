@@ -1,0 +1,66 @@
+<!--pages/listInfo/index.wxml-->
+<import src="/tabbar-template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<view class="contain">
+  <view class="banner">
+    <image src="/assets/info_left.png" class="sub icon-left"></image>
+    <image src="/assets/info_right.png" class="sub icon-right"></image>
+    <swiper autoplay interval="{{3000}}" duration="{{1000}}" circular>
+      <block wx:for='{{listInfo.photos}}' wx:key='index'>
+      <swiper-item >
+        <image src="{{item}}" mode="widFix" class="img"></image>
+      </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="itemInfo">
+    <view class="title">
+      <text>{{listInfo.name}}</text>
+      <view class="icon">
+        <image src="/assets/_star.png"></image>
+        <image src="/assets/_click.png"></image>
+        <image src="/assets/_address.png"></image>
+      </view>
+    </view>
+    <view class="dynasty">
+      年代： {{listInfo.era}}
+    </view>
+
+    <view class="itemDesc">
+      <text>详细信息:</text>
+      <text class="itemDescInfo">{{listInfo.intro}}</text>
+    </view>
+  </view>
+  <!-- 视频信息 -->
+  <view class="video">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+      controls object-fit="fill"></video>
+  </view>
+  <!-- 评论区 -->
+  <view class="comment">
+    <view class="head">
+      <text>评论区</text>
+      <view class="icon" bindtap="toComment">
+        <image src="/assets/_comment.png"></image>
+        <text>我要评论</text>
+      </view>
+    </view>
+<!-- 输入框 -->
+    <view class="input-section" wx:if="{{showInput}}">
+    <input placeholder="评论" focus="true" bindinput="message" value="{{value}}"></input>
+   <!-- <text bindtap="confirm">发送评论</text> -->
+   <button bindtap="confirm">评论</button>
+    </view>
+
+    <view class="commentInfo">
+       <view class="item" wx:for='{{comentInfo}}' wx:key='index'>
+       <image src="{{item.avater}}" />
+       <view class="item-r">
+       <text class="nickName">{{item.nickname}}</text>
+       <text>{{item.content}}</text>
+       </view>
+       </view>
+    </view>
+  </view>
+
+</view>

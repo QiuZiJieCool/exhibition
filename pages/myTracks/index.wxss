@@ -1,0 +1,33 @@
+/* pages/myTracks/index.wxss */
+.icon {
+  display: flex;
+  width: 400rpx;
+  margin: 50rpx auto 30rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.currentImg {
+  width: 80rpx!important;
+  height: 82rpx!important;
+}
+.title {
+  width: 650rpx;
+  margin: 0 auto;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+}
+.title image {
+  margin-right: 20rpx;
+  width: 5rpx;
+  height: 26rpx;
+}
+.exList {
+  margin-top: 20rpx;
+  margin-bottom: 150rpx;
+}

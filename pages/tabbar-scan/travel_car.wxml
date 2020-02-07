@@ -1,0 +1,4 @@
+<!--pages/travel_car/travel_car.wxml-->
+<import src="/tabbar-template/index.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
