@@ -27,14 +27,15 @@ Page({
     rankList: ["默认", "收藏量", "点赞量", "评论量"]
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function(options) {
+  onLoad: function (options) {
     // 请求所有年代
-    request('api/admin/getAllEra', 'post', {}, res => {
+    request('api/index/getAllEra', 'get', {}, res => {
+      console.log(res)
       if (res.code !== 200) return console.log('获取年代失败')
       // 处理获取的数据，将eras改成text
       // const arr = this.convertKey(res.data.eras,['id','text'])
@@ -44,7 +45,7 @@ Page({
       })
     })
     // 请求所有类别
-    request('api/admin/getAllType', 'post', {}, res => {
+    request('api/index/getAllType', 'get', {}, res => {
       console.log(res)
       if (res.code !== 200) return console.log('获取类别失败')
       // 处理获取的数据，将eras改成text
@@ -56,9 +57,9 @@ Page({
     })
     // 请求默认数据
     request("api/index", "post", {
-      pageRequest:{
-        pageSize:5,
-        pageNum:1
+      pageRequest: {
+        pageSize: 5,
+        pageNum: 1
       }
     }, res => {
       console.log(res)
@@ -97,7 +98,7 @@ Page({
     return newArr;
   },
 
-  selectEvent: function(e) {
+  selectEvent: function (e) {
     console.log(e)
     if (e.detail.eraname) {
       this.setData({
@@ -236,7 +237,7 @@ Page({
   },
   // 底部扫一扫方法
   toScan,
-  onReachBottom: function() {
+  onReachBottom: function () {
     //  this.loadMore()
   },
 })

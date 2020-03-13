@@ -1,5 +1,5 @@
 <!--components/museumList/index.wxml-->
 <view class="contain">
-<text>{{desc}}</text>
+<text class="desc">{{desc}}</text>
 <image src="{{src}}"></image>
 </view>

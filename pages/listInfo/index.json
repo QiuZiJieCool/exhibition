@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "展品信息"
+  "navigationBarTitleText": "展品信息",
+    "navigationBarBackgroundColor": "#FAFAFA"
 }

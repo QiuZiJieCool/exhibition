@@ -1,15 +1,16 @@
 /* pages/travel_index/travel_index.wxss */
 /**index.wxss**/
-page{
-  background-color: #fdfdfd;
+page {
+  background-color: #f9f9f9;
 }
 .search {
  position: relative;
- background-color:#F3EBD3;
- border-radius: 20rpx;
- width: 642rpx;
+ /* background-color:#F3EBD3; */
+ border-radius:40rpx;
+ width: 670rpx;
  margin: 20rpx auto;
- height: 44rpx;
+ height: 50rpx;
+ background-color: white;
 }
 .center {
   text-align: center;
@@ -31,7 +32,7 @@ page{
 }
 
 .choose {
-  width: 400rpx;
+  width:470rpx;
   margin: 0 auto;
   display: flex;
   font-size: 24rpx;
@@ -43,22 +44,37 @@ page{
   display: flex;
   align-items: center;
 }
+.dynasty>text,
+.variety>text {
+  margin-right: 32rpx;
+  color: #B2B2B2;
+  font-size: 17rpx;
+}
 .rankList {
-  width: 642rpx;
+  width: 500rpx;
   margin: 20rpx auto 0;
   display: flex;
   justify-content: space-between;
-  font-size: 26rpx;
+  font-size: 20rpx;
   color: #ccc;
 }
 .rankList text {
   text-align: center;
   padding:16rpx 0;
+  font-size: 20rpx;
 }
 .line {
-  border-bottom: 1rpx solid #F2BE45;
+  border-bottom: 4rpx solid #f2be45;
   color: black;
+    font-family:Microsoft YaHei;
+    font-size: 22rpx!important;
+    font-weight:400;
 }
 .exhibitionList {
-  margin-bottom: 140rpx;
+  box-shadow: 0 0rpx 0rpx 10rpx #f9f9f9;
+  width: 700rpx;
+  margin: 20rpx auto 120rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  border: 1rpx solid #fff;
 }

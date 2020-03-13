@@ -9,28 +9,28 @@
     <block wx:if="{{iconNum==0}}">
       <view class="icon">
         <image src="/assets/index_hot.png" />
-        <text>{{hot}}</text>
+        <text>{{hot||0}}</text>
       </view>
     </block>
 
     <block wx:if="{{iconNum==1}}">
       <view class="icon">
         <image src="/assets/index_sc.png" />
-        <text>{{hot}}</text>
+        <text>{{hot||0}}</text>
       </view>
     </block>
 
     <block wx:if="{{iconNum==2}}">
       <view class="icon">
         <image src="/assets/index_click.png" />
-        <text>{{hot}}</text>
+        <text>{{hot||0}}</text>
       </view>
     </block>
 
     <block wx:if="{{iconNum==3}}">
       <view class="icon">
         <image src="/assets/index_comment.png" />
-        <text>{{hot}}</text>
+        <text>{{hot||0}}</text>
       </view>
     </block>
 </block>

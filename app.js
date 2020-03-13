@@ -33,7 +33,6 @@ App({
             }
           })
         } else if (res.authSetting['scope.userInfo']==null){
-          console.log("11111")
           wx.getUserInfo({
             success: res => {
               console.log(res)

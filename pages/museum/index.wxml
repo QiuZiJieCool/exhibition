@@ -1,44 +1,41 @@
 <!--pages/museum/index.wxml-->
-<import src="/tabbar-template/index.wxml"/>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<import src="/tabbar-template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
 <view class="top">
-<text class="{{borderLine==true?'current':''}}" bindtap="museum">博物馆新闻</text>
-<text>|</text>
-<text class="{{borderLine==false?'current':''}}" bindtap="idea">意见反馈</text>
+  <text class="{{borderLine==true?'current':''}}" bindtap="museum">博物馆新闻</text>
+  <text>|</text>
+  <text class="{{borderLine==false?'current':''}}" bindtap="idea">意见反馈</text>
 </view>
-
 
 <view class="content">
-<block wx:if="{{borderLine}}">
-<image src="/assets/user_ad.png" class="ad"></image>
-<block wx:for="{{newsInfo}}" wx:key="index">
-<museumList  desc="{{item.desc}}" src="{{item.src}}" />
-</block>
+<!-- 博物馆新闻 -->
+  <block wx:if="{{borderLine}}">
+  <view class="newsList"  wx:for='{{newsInfo}}' wx:key='index' wx:for-item='groupList'>
+   <view class="newsTime">{{publishTime}}</view>
+    <view class="newsGroup">
+      <image src="{{groupList[0].url}}" class="ad"></image>
+      <museumList desc="{{item.title}}" src="{{item.url}}" wx:for="{{groupList}}" wx:key='index'/>
+    </view>
+  </view>
+  </block>
 
-<image src="/assets/user_ad.png"  class="ad"></image>
-<block wx:for="{{newsInfo}}" wx:key="index">
-<museumList  desc="{{item.desc}}" src="{{item.src}}" />
-</block>
+<!-- 意见反馈 -->
+  <block wx:else>
+    <view class="suggest">
+      <text>尊敬的游客</text>
+      <text class="info">请把您宝贵的意见留在这里，我们将会对展会做出相应的考虑和调整～ 也欢迎您拨打客服热线</text>
 
-</block>
+      <view class="call">
+        <image src="/assets/museum_call.png" class="phone"></image>
+        <text class="phoneNum">456-788888888</text>
+      </view>
+    </view>
 
-<block wx:else>
- <view class="suggest">
- <text>尊敬的游客</text>
- <text class="info">请把您宝贵的意见留在这里，我们将会对展会做出相应的考虑和调整～ 也欢迎您拨打客服热线</text>
-
-<view class="call">
-<image src="/assets/museum_radius.png" class="radius"></image>
-<image src="/assets/museum_call.png" class="phone"></image>
- <text class="phoneNum">1027964757</text>
-</view>
- </view>
-
- <view class="feedbook">
- <image src="/assets/museum_success.png" class="success"></image>
- <input placeholder="请在这里留下您的宝贵意见" placeholder-class="placeholder" bindinput="messageInfo" value="{{value}}"></input>
- <text class="send" bindtap="send">发送</text>
- </view>
-</block>
+    <view class="feedbook">
+      <image src="/assets/museum_success.png" class="success"></image>
+      <input placeholder="请在这里留下您的宝贵意见" placeholder-class="placeholder" bindinput="messageInfo" value="{{value}}"></input>
+      <text class="send" bindtap="send">发送</text>
+    </view>
+  </block>
 
 </view>

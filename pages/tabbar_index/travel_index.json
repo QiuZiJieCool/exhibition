@@ -3,5 +3,6 @@
   "usingComponents": {
     "mySelect": "/components/select/index",
     "exList": "/components/exList/index"
-  }
+  },
+  "navigationBarBackgroundColor": "#f9f9f9"
 }

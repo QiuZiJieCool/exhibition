@@ -1,11 +1,17 @@
 /* pages/myTracks/index.wxss */
-.icon {
-  display: flex;
-  width: 400rpx;
-  margin: 50rpx auto 30rpx;
-  justify-content: space-between;
-  align-items: center;
+.top {
+    background-color: #FAFAFA;
+    height: 190rpx;
+    display: flex;
+    padding: 0 186rpx;
 }
+.icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400rpx;
+}
+
 .icon image {
   width: 48rpx;
   height: 48rpx;
@@ -20,10 +26,13 @@
   padding: 0 20rpx;
   display: flex;
   align-items: center;
-  font-size: 24rpx;
+  font-size: 22rpx;
+  color: #353535;
+  font-family:Microsoft YaHei;
+  font-weight:400;
 }
 .title image {
-  margin-right: 20rpx;
+  margin-right: 11rpx;
   width: 5rpx;
   height: 26rpx;
 }

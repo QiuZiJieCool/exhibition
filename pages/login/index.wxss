@@ -1,42 +1,58 @@
 /* pages/login/index.wxss */
-/* .userinfo {
+page{
+  width: 100%;
+  height: 100%;
+}
+.login-box{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 50rpx;
-  border-radius: 50%;
+.logo {
+  position: absolute;
+  height: 90rpx;
+  width: 95rpx;
+  left:50%;
+  top:150rpx;
+  transform: translate(-50%,-50%)
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.logo image{
+  width: 100%;
+  height: 100%;
 }
-
-.usermotto {
-  margin-top: 200px;
-} */
-/**index.wxss**/
-.userinfo {
+.login-box image {
+  width: 100%;
+  height: 100%;
+}
+.login-btn{
+  width: 200rpx;
+  height: 64prx;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%)
+}
+.login-btn button {
+  background-color: #28BB60;
+    font-size: 28rpx;
+    color: #fff;
+}
+.logo-text {
+  position: absolute;
+  top:290rpx;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+ text-align: center;
+ flex-direction: column;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.welcome {
+  font-size: 16rpx;
+  color: #0E0D0D;
+  line-height: 40rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.appName {
+  font-size: 22rpx;
+  color: #0E0D0D;
+  line-height: 40rpx;
 }

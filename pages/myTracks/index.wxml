@@ -2,18 +2,20 @@
 <import src="/tabbar-template/index.wxml"/>
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
 
+<view class="top">
 <view class="icon">
 
 <image src="/assets/_message.png" bindtap="message"  wx:if="{{current==3||current==2}}"/>
-<image src="/assets/index_comment.png"  class="currentImg" wx:if="{{current==1}}" />
+<image src="/assets/tracks_message.png"  class="currentImg" wx:if="{{current==1}}" />
 
 
 <image src="/assets/_star.png" bindtap="star" wx:if="{{current==1||current==3}}" />
-<image src="/assets/index_sc.png"  class="currentImg" wx:if="{{current==2}}" />
+<image src="/assets/tracks_star.png"  class="currentImg" wx:if="{{current==2}}" />
  
 <image src="/assets/_click.png" bindtap="click"  wx:if="{{current==1||current==2}}" />
-<image src="/assets/index_click.png"  class="currentImg" wx:if="{{current==3}}" />
+<image src="/assets/track_click.png"  class="currentImg" wx:if="{{current==3}}" />
 </view> 
+</view>
 
 <view class="title">
 <image src="/assets/tranck_left.png"></image>
@@ -25,15 +27,15 @@
 <view class="exList">
 
 <block wx:for="{{list0}}" wx:key="index" wx:if="{{current==1}}">
-<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="{{false}}"></exList>
 </block>
 
 <block wx:for="{{list1}}" wx:key="index" wx:if="{{current==2}}">
-<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="{{false}}"></exList>
 </block>
 
 <block wx:for="{{list2}}" wx:key="index" wx:if="{{current==3}}">
-<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.src}}" showIcon="{{false}}"></exList>
+<exList listId="{{item.id}}" iconNum="{{currentIndex}}" listName="{{item.name}}" listSrc="{{item.photos[0]}}" showIcon="{{false}}"></exList>
 </block>
 
 </view>

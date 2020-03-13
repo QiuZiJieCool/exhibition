@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    height:0,
     current: 0,
     userInfo: null,
     listId: '',
@@ -22,7 +23,9 @@ Page({
     showInput: false,
     listInfo: null,
     inputMessage: '',
-    comentInfo: []
+    comentInfo: [],
+    isLike:true,
+    isCollected:true
   },
 
   /**
@@ -44,6 +47,11 @@ Page({
   toComment() {
     this.setData({
       showInput: true
+    })
+  },
+  handBlur(){
+    this.setData({
+      showInput:false
     })
   },
   confirm() {
@@ -96,6 +104,25 @@ Page({
       })
     })
   },
+  addLike(){
+    request(`api/user/likeItem?itemid=${this.data.listId}`,'get',{
+      like:this.data.isLike
+    },res=>{
+      
+      this.setData({
+        isLike: !this.data.isLike
+      })
+    })
+  },
+  addCollected(){
+    request(`api/user/collectItem?itemid=${this.data.listId}`, 'get', {
+      collect: this.data.isCollected
+    }, res => {
+      this.setData({
+        isCollected: !this.data.isCollected
+      })
+    })
+  },
   toScan,
 
   /**
@@ -129,16 +156,16 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  // onPullDownRefresh: function () {
 
-  },
+  // },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+  // /**
+  //  * 页面上拉触底事件的处理函数
+  //  */
+  // onReachBottom: function () {
 
-  },
+  // },
 
   /**
    * 用户点击右上角分享

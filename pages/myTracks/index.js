@@ -8,23 +8,9 @@ Page({
    */
   data: {
       current:1,
-      list0: [{ name: "马踏飞燕", src: "/assets/timg5.png", hot: "8845w" },
-          { name: "越王勾践剑", src: "/assets/timg1.png", hot: "2132w" },
-          { name: "富春山居图", src: "/assets/timg3.png", hot: "845w" },
-          { name: "九龙鼎", src: "/assets/timg2.png", hot: "8845w" },
-          { name: "溪山行旅图", src: "/assets/timg4.png", hot: "9445w" }],
-    list1: [
-    { name: "富春山居图", src: "/assets/timg3.png", hot: "845w" },
-      { name: "越王勾践剑", src: "/assets/timg1.png", hot: "2132w" },
-    { name: "九龙鼎", src: "/assets/timg2.png", hot: "8845w" },
-      { name: "马踏飞燕", src: "/assets/timg5.png", hot: "8845w" },
-    { name: "溪山行旅图", src: "/assets/timg4.png", hot: "9445w" }],
-    list2: [
-    { name: "越王勾践剑", src: "/assets/timg1.png", hot: "2132w" },
-      { name: "马踏飞燕", src: "/assets/timg5.png", hot: "8845w" },
-    { name: "溪山行旅图", src: "/assets/timg4.png", hot: "9445w" },
-      { name: "富春山居图", src: "/assets/timg3.png", hot: "845w" },
-      { name: "九龙鼎", src: "/assets/timg2.png", hot: "8845w" }],
+      list0: [],
+    list1: [],
+    list2: []
   },
 
   /**
@@ -32,15 +18,46 @@ Page({
    */
   onLoad: function (options) {
     template.tabbar("tabBar", 2, this) //0表示第一个tabbar，这里1表示第二个 tabbar 的 icon
+    request('api/user/getHistory','get',{
+     sign:2
+    },res=>{
+      console.log(res)
+      if(res.code == 200){
+        this.setData({
+          list0:res.data.item
+        })
+      }
+    })
   },
   star(){
-   this.setData({
-     current:2
-   })
+    this.setData({
+      current: 2
+    })
+    request('api/user/getHistory', 'get', {
+      sign: 3
+    }, res => {
+      console.log(res)
+      if (res.code == 200) {
+        this.setData({
+          list1:res.data.item
+        })
+      }
+    })
+
   },
   click(){
     this.setData({
       current: 3
+    })
+    request('api/user/getHistory', 'get', {
+      sign: 1
+    }, res => {
+      console.log(res)
+      if (res.code == 200) {
+        this.setData({
+          list2: res.data.item
+        })
+      }
     })
   },
   message() {

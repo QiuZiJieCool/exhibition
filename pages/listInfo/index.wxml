@@ -7,9 +7,9 @@
     <image src="/assets/info_right.png" class="sub icon-right"></image>
     <swiper autoplay interval="{{3000}}" duration="{{1000}}" circular>
       <block wx:for='{{listInfo.photos}}' wx:key='index'>
-      <swiper-item >
-        <image src="{{item}}" mode="widFix" class="img"></image>
-      </swiper-item>
+        <swiper-item>
+          <image src="{{item}}" mode="widFix" class="img"></image>
+        </swiper-item>
       </block>
     </swiper>
   </view>
@@ -17,8 +17,12 @@
     <view class="title">
       <text>{{listInfo.name}}</text>
       <view class="icon">
-        <image src="/assets/_star.png"></image>
-        <image src="/assets/_click.png"></image>
+        <image src="/assets/_star.png" bindtap="addCollected" wx:if='{{isCollected}}'></image>
+        <image src="/assets/tracks_star.png" bindtap="addCollected" wx:if='{{!isCollected}}'></image>
+        <block>
+          <image src="/assets/_click.png" bindtap="addLike" wx:if='{{isLike}}'></image>
+          <image src="/assets/track_click.png" bindtap="addLike" wx:else></image>
+        </block>
         <image src="/assets/_address.png"></image>
       </view>
     </view>
@@ -40,26 +44,28 @@
   <view class="comment">
     <view class="head">
       <text>评论区</text>
-      <view class="icon" bindtap="toComment">
+      <view class="icon1" bindtap="toComment">
         <image src="/assets/_comment.png"></image>
         <text>我要评论</text>
       </view>
     </view>
-<!-- 输入框 -->
+    <!-- 输入框 -->
     <view class="input-section" wx:if="{{showInput}}">
-    <input placeholder="评论" focus="true" bindinput="message" value="{{value}}"></input>
-   <!-- <text bindtap="confirm">发送评论</text> -->
-   <button bindtap="confirm">评论</button>
+      <input placeholder="评论" focus="true" bindinput="message" value="{{value}}" bindblur="handBlur"></input>
+      <!-- <text bindtap="confirm">发送评论</text> -->
+      <view bindtap="confirm" class="confirm1">发送</view>
     </view>
 
     <view class="commentInfo">
-       <view class="item" wx:for='{{comentInfo}}' wx:key='index'>
-       <image src="{{item.avater}}" />
-       <view class="item-r">
-       <text class="nickName">{{item.nickname}}</text>
-       <text>{{item.content}}</text>
-       </view>
-       </view>
+      <view class="item" wx:for='{{comentInfo}}' wx:key='index'>
+        <view class="item-t">
+          <image src="{{item.avater}}" />
+          <text class="nickName">{{item.nickname}}</text>
+        </view>
+        <view class="item-b">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
     </view>
   </view>
 

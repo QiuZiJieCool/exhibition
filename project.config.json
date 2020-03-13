@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -103,6 +103,20 @@
 					"id": -1,
 					"name": "pages/login/index",
 					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myTracks/index",
+					"pathName": "pages/myTracks/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/voluntary/index",
+					"pathName": "pages/voluntary/index",
 					"scene": null
 				}
 			]

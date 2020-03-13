@@ -1,36 +1,48 @@
 /* pages/tabBar-template/index.wxss */
 .tabBar-icon{
-  width:63rpx;
+  width:60rpx;
   height: 63rpx;
 }
 .tabBar{
+  height: 120rpx;
   width:100%;
   position: fixed;
   bottom:0;
-  padding:10rpx;
-  margin-left:-4rpx;
-  background:#fff;
-  font-size:24rpx;
+  background:rgba(253,252,251,1);
+  font-size:17rpx;
   color:#8A8A8A;
-  box-shadow: 0 0 02rpx #eee; 
+ box-shadow:8rpx 6rpx 40rpx 0px rgba(147,118,33,0.3);
   z-index: 9999;
 }
 
  .tabBar-item{
-   margin-top: 20rpx;
+  margin-top: 20rpx;
   float:left;
   width: 33.333%;
   text-align: center;
   overflow: hidden;
 }
+ .tabBar-item1 {
+   height: 100%;
+  float:left;
+  width: 33.333%;
+  text-align: center;
+  overflow: hidden;
+ }
+ .tabBar-icon1{
+   width: 120rpx;
+   height: 120rpx;
+ }
 /*当前字体颜色*/
 .tabBartext{
   color: black;
+  font-size: 17rpx;
 }
 .navigator-hover{
   background-color: rgba(0, 0, 0, 0);
 }
-.tabBar-item:nth-child(2) .tabBar-icon{
+/* .tabBar-item:nth-child(2) .tabBar-icon{
 width: 100rpx;
 height: 100rpx;
-}
+margin-top: 0;
+} */

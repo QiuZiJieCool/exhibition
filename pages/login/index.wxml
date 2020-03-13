@@ -1,17 +1,19 @@
 <!--pages/login/index.wxml-->
-  <!-- <view class="login" >
+<!-- <view class="login" >
     <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"><text class="login-text">登 录</text></button>
   </view> -->
 
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <!-- <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block> -->
+<view class="login-box">
+  <image src="/assets/login-bg.png"></image>
+
+  <view class="logo">
+    <image src="/assets/login.png"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="logo-text">
+    <text class="welcome">欢迎使用</text>
+    <text class="appName">基于微信的虚拟展厅</text>
+  </view>
+  <view class="login-btn">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击登陆 </button>
   </view>
 </view>

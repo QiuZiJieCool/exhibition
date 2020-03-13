@@ -1,36 +1,36 @@
 <!--pages/voluntary/index.wxml-->
-<import src="/tabbar-template/index.wxml"/>
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+<import src="/tabbar-template/index.wxml" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
 
 <view class="top">
-<text class="{{borderLine==true?'current':''}}" bindtap="museum">志愿者招募</text>
-<text>|</text>
-<text class="{{borderLine==false?'current':''}}" bindtap="idea">志愿服务</text>
+  <text class="{{borderLine==true?'current':''}}" bindtap="museum">志愿者招募</text>
+  <text>|</text>
+  <text class="{{borderLine==false?'current':''}}" bindtap="idea">志愿服务</text>
 </view>
 
 
 <view class="content">
-<block wx:if="{{borderLine}}">
-<image src="/assets/voluntry.png" class="ad"></image>
-<block wx:for="{{newsInfo}}" wx:key="index">
-<museumList  desc="{{item.desc}}" src="{{item.src}}" />
-</block>
+  <block wx:if="{{borderLine}}">
+    <image src="/assets/voluntry.png" class="ad"></image>
 
-<image src="/assets/voluntry.png"  class="ad"></image>
-<block wx:for="{{newsInfo}}" wx:key="index">
-<museumList  desc="{{item.desc}}" src="{{item.src}}" />
-</block>
+    <view class="voluntries" wx:for='{{newsInfo}}' wx:for-item="newsGroup" wx:key='index'>
+      <view class="newsTime">11:00</view>
+      <view class="volunItem">
+        <museumList desc="{{item.desc}}" src="{{item.src}}" wx:for="{{newsGroup}}" wx:key="index" />
+      </view>
+    </view>
 
-</block>
+  </block>
 
-<block wx:else>
-<view class="item" wx:for="{{activity}}" wx:key="index">
-<text>志愿者  {{item.name}}</text>
-<text>服务区域：{{item.location}}</text>
-<text>联系方式：{{item.phone}}</text>
-<view class="info">详情
-</view>
-</view>
-</block>
+  <block wx:else>
+    <view class="item" wx:for="{{activity}}" wx:key="index">
+      <text>志愿者  {{item.name}}</text>
+      <text>服务区域：{{item.location}}</text>
+      <text>联系方式：{{item.phone}}</text>
+      <image class="call" src="/assets/call.png"></image>
+      <view class="info">详情
+      </view>
+    </view>
+  </block>
 
 </view>

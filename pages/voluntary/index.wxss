@@ -1,5 +1,7 @@
 /* pages/voluntary/index.wxss */
-
+page {
+  background-color: #FCFCFC;
+}
 .top {
   display: flex;
   width: 500rpx;
@@ -16,10 +18,24 @@
 
 .content {
   background-color: #fcfcfc;
-  padding: 0 30rpx;
+  padding: 0 15rpx;
   margin-bottom: 150rpx;
 }
-
+.volunItem{
+  background:rgba(255,255,255,1);
+  box-shadow:3rpx 4rpx 30rpx 0 rgba(136,136,136,0.1);
+  border-radius:10rpx;
+}
+.voluntries {
+  margin-top: 30rpx;
+}
+.newsTime {
+  text-align: center;
+  color: #888888;
+  margin-bottom: 10rpx;
+  font-size: 18rpx;
+  background-color: #FCFCFC!important;
+}
 .ad {
   width: 710rpx;
   height: 250rpx;
@@ -31,27 +47,38 @@
 }
 .item {
   padding: 15rpx 30rpx 10rpx 20rpx;
-  width: 650rpx;
+  width: 670rpx;
   height: 160rpx;
   border: 1rpx dashed #FCFCFC;
   margin:20rpx auto;
   display: flex;
   flex-direction: column;
-  font-size: 24rpx;
+  font-size: 20rpx;
   position: relative;
+  color: #353535;
+  background:rgba(255,255,255,1);
+border-radius:10rpx;
 }
 .item text {
-  margin-bottom: 14rpx;
+  margin-bottom: 20rpx;
+}
+.call {
+  width: 23rpx;
+  height: 23rpx;
+  position: absolute;
+  left: 250rpx;
+  top:110rpx;
 }
 .info{
   position: absolute;
-  right:30rpx;
-  bottom:10rpx;
-  width: 66rpx;
-  height: 34rpx;
+  right:45rpx;
+  bottom:30rpx;
+  width: 64rpx;
+  height: 32rpx;
   background-color: #FCCC91;
   text-align: center;
-  line-height: 34rpx;
+  line-height: 32rpx;
   color: white;
   font-size: 20rpx;
+  border-radius:10rpx;
 }
